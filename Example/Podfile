@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'SMToaster_Example' do
+  pod 'SMToaster', :path => '../'
+
+  target 'SMToaster_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
