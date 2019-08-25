@@ -1,7 +1,7 @@
 use_frameworks!
 
 target 'SMToaster_Example' do
-  pod 'SMToaster', :path => '../'
+  pod 'SMToaster', :path => '~/Desktop/Projects/SMToaster/SMToaster'
 
   target 'SMToaster_Tests' do
     inherit! :search_paths
