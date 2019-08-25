@@ -98,6 +98,12 @@ private extension SMToaster {
             messageLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10)
         ])
         
+        // Check if toast view is displayed on screen
+        if !isDisplayedOnScreen() {
+            removeFromSuperview()
+            return
+        }
+        
         if let containerView = superview {
             NSLayoutConstraint.activate([
                 leftAnchor.constraint(equalTo: containerView.leftAnchor, constant: 15),
@@ -109,4 +115,10 @@ private extension SMToaster {
             removeFromSuperview()
         }
     }
+    
+    
+    func isDisplayedOnScreen() -> Bool {
+        return ((!isHidden) || (superview != nil))
+    }
+    
 }
