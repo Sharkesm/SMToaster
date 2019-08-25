@@ -24,7 +24,7 @@ public class SMToaster: UIView {
     public var titleFontFamily: String = "HelveticaNeue-Bold"
     public var messageFontFamily: String = "HelveticaNeue-Regular"
     public var titleFontSize: CGFloat = 18.0
-    public var messageFontSize: CGFloat = 12.0
+    public var messageFontSize: CGFloat = 10.0
     
     // MARK: - Initializer Methods
     public override init(frame: CGRect) {
@@ -77,26 +77,25 @@ private extension SMToaster {
         titleLabel.textAlignment = .left
         titleLabel.adjustsFontSizeToFitWidth = true
         titleLabel.font = UIFont(name: titleFontFamily, size: titleFontSize)
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
         
         messageLabel.numberOfLines = 0
         messageLabel.textAlignment = .left
         messageLabel.adjustsFontSizeToFitWidth = true
         messageLabel.font = UIFont(name: messageFontFamily, size: messageFontSize)
+        messageLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        let stackView = UIStackView(arrangedSubviews: [titleLabel, messageLabel])
-        stackView.axis = .vertical
-        stackView.alignment = .fill
-        stackView.distribution = .fill
-        stackView.spacing = 0
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        
-        addSubview(stackView)
+        addSubview(titleLabel)
+        addSubview(messageLabel)
         
         NSLayoutConstraint.activate([
-            stackView.topAnchor.constraint(equalTo: topAnchor, constant: 10),
-            stackView.leftAnchor.constraint(equalTo: leftAnchor, constant: 15),
-            stackView.rightAnchor.constraint(equalTo: rightAnchor, constant: -15),
-            stackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10)
+            titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 10),
+            titleLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 15),
+            titleLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -15),
+            messageLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 5),
+            messageLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 15),
+            messageLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -15),
+            messageLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10)
         ])
         
         if let containerView = superview {
