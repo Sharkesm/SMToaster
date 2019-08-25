@@ -3,17 +3,30 @@ import UIKit
 @available(iOS 9.0, *)
 public class SMToaster: UIView {
     
+    // Default content
     private(set) var title: String = "Toast title"
     private(set) var message: String = "Toast message"
     
-    private var titleLabel: UILabel = UILabel()
-    private var messageLabel: UILabel = UILabel()
+    // UILabel properties
+    private let titleLabel: UILabel = UILabel()
+    private let messageLabel: UILabel = UILabel()
     
+    // Style properties
+    private var shadowBgColor: CGColor {
+        return UIColor(red: 220/255.0, green: 221/255.0, blue: 225/255.0, alpha: 1.0).cgColor
+    }
+    
+    private var borderColor: CGColor {
+        return UIColor(red: 245/255.0, green: 246/255.0, blue: 250/255.0, alpha: 1.0).cgColor
+    }
+    
+    // Font family properties
     public var titleFontFamily: String = "HelveticaNeue-Bold"
     public var messageFontFamily: String = "HelveticaNeue-Regular"
     public var titleFontSize: CGFloat = 18.0
     public var messageFontSize: CGFloat = 12.0
     
+    // MARK: - Initializer Methods
     public override init(frame: CGRect) {
         super.init(frame: frame)
         titleLabel.text = title
@@ -42,17 +55,23 @@ public class SMToaster: UIView {
     
 }
 
+
+// MARK: - Private Methods
 @available(iOS 9.0, *)
-extension SMToaster {
+private extension SMToaster {
     
-    private func setupViews() {
+    func setupViews() {
         
         translatesAutoresizingMaskIntoConstraints = false
         
         backgroundColor = .white
-        layer.borderColor = UIColor.red.cgColor
-        layer.borderWidth = 1.2
         layer.cornerRadius = 5
+        layer.borderColor = borderColor
+        layer.borderWidth = 1.2
+        layer.shadowColor = shadowBgColor
+        layer.shadowOffset = CGSize(width: 0, height: 6)
+        layer.shadowRadius = 6
+        layer.shadowOpacity = 0.6
         
         titleLabel.numberOfLines = 0
         titleLabel.textAlignment = .left
