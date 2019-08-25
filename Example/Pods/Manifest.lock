@@ -1,0 +1,16 @@
+PODS:
+  - SMToaster (0.1.0)
+
+DEPENDENCIES:
+  - SMToaster (from `~/Desktop/Projects/SMToaster/SMToaster`)
+
+EXTERNAL SOURCES:
+  SMToaster:
+    :path: "~/Desktop/Projects/SMToaster/SMToaster"
+
+SPEC CHECKSUMS:
+  SMToaster: ad122dd8d82ffbf180c5417b099c092680312028
+
+PODFILE CHECKSUM: bde04f923f3e7ba08479174b66073ae09807af10
+
+COCOAPODS: 1.6.1
