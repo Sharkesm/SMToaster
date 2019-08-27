@@ -4,8 +4,17 @@ import UIKit
 public class SMToaster: UIView {
     
     // Default content
-    private(set) var title: String = "Toast title"
-    private(set) var message: String = "Toast message"
+    public var title: String = "" {
+        didSet {
+            titleLabel.text = self.title
+        }
+    }
+    
+    public var message: String = "" {
+        didSet {
+            messageLabel.text = self.message
+        }
+    }
     
     // UILabel properties
     private let titleLabel: UILabel = UILabel()
@@ -34,12 +43,12 @@ public class SMToaster: UIView {
         setupViews()
     }
     
-    public convenience init(title: String, message: String) {
+    public convenience init(title: String? = "Toast title", message: String? = "Toast message") {
         self.init(frame: CGRect.zero)
-        self.title = title
-        self.message = message
-        self.titleLabel.text = title
-        self.messageLabel.text = message
+        self.title = title ?? ""
+        self.message = message ?? ""
+        self.titleLabel.text = self.title
+        self.messageLabel.text = self.message
         setupViews()
     }
     
