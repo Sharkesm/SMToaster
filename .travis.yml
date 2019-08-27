@@ -9,10 +9,10 @@ language: swift
 before_install:
 - gem install cocoapods # Since Travis is not always on latest version
 - pod repo update
-# - pod install --project-directory=Example
+ - pod install --project-directory=Example
 script:
 - set -o pipefail && xcodebuild -version 
 - set -o pipefail && xcodebuild -showsdks
 - set -o pipefail && xcodebuild -showdestinations -workspace Example/SMToaster.xcworkspace -scheme SMToaster-Example 
-- set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace Example/SMToaster.xcworkspace -scheme SMToaster-Example -destination 'platform=iOS Simulator,OS=12.2,name=iPhone 7' ONLY_ACTIVE_ARCH=NO | xcpretty
+- set -o pipefail && xcodebuild test -enableCodeCoverage YES -workspace Example/SMToaster.xcworkspace -scheme SMToaster-Example -destination 'platform=iOS Simulator,OS=12.2,name=iPhone 7' ONLY_ACTIVE_ARCH=YES | xcpretty
 - pod lib lint 
