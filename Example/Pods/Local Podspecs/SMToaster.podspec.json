@@ -1,9 +1,9 @@
 {
   "name": "SMToaster",
   "version": "0.1.0",
-  "summary": "A short description of SMToaster.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/Sharkes Monken/SMToaster",
+  "summary": "Toasting view similar to Android toasting message feature.",
+  "description": "Toasting view similar to Android toasting message feature and includes seperate card toast views.",
+  "homepage": "https://github.com/Sharkesm/SMToaster",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,11 +12,12 @@
     "Sharkes Monken": "sharkesm@gmail.com"
   },
   "source": {
-    "git": "https://github.com/Sharkes Monken/SMToaster.git",
+    "git": "https://github.com/Sharkesm/SMToaster.git",
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "10.0"
   },
+  "swift_version": "5.0",
   "source_files": "SMToaster/Classes/**/*"
 }
