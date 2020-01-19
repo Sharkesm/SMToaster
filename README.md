@@ -1,9 +1,7 @@
 # SMToaster
 
-[![CI Status](https://img.shields.io/travis/Sharkes Monken/SMToaster.svg?style=flat)](https://travis-ci.org/Sharkes Monken/SMToaster)
-[![Version](https://img.shields.io/cocoapods/v/SMToaster.svg?style=flat)](https://cocoapods.org/pods/SMToaster)
-[![License](https://img.shields.io/cocoapods/l/SMToaster.svg?style=flat)](https://cocoapods.org/pods/SMToaster)
-[![Platform](https://img.shields.io/cocoapods/p/SMToaster.svg?style=flat)](https://cocoapods.org/pods/SMToaster)
+[![Travis CI](https://api.travis-ci.org/Sharkesm/SMToaster.svg?branch=master)](https://travis-ci.org/Sharkesm/SMToaster)
+[![License](https://img.shields.io/badge/License-MIT-8D6E63.svg)](LICENSE)  
 
 ## Example
 
