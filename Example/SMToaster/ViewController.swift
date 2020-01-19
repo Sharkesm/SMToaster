@@ -7,17 +7,21 @@
 //
 
 import UIKit
+import SMToaster
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let toaster = SMToaster(title: "Toast Header", message: "I will display any content to give a brief summary about the toaster")
+        
+        view.addSubview(toaster)
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
 }

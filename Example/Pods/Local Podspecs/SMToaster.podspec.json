@@ -1,0 +1,23 @@
+{
+  "name": "SMToaster",
+  "version": "0.1.0",
+  "summary": "Toasting view similar to Android toasting message feature.",
+  "description": "Toasting view similar to Android toasting message feature and includes seperate card toast views.",
+  "homepage": "https://github.com/Sharkesm/SMToaster",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Sharkes Monken": "sharkesm@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/Sharkesm/SMToaster.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "swift_version": "5.0",
+  "source_files": "SMToaster/Classes/**/*"
+}
