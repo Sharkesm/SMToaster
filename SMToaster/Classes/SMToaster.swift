@@ -117,17 +117,19 @@ private extension SMToaster {
             NSLayoutConstraint.activate([
                 leftAnchor.constraint(equalTo: containerView.leftAnchor, constant: 15),
                 rightAnchor.constraint(equalTo: containerView.rightAnchor, constant: -15),
-                bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -50),
+                bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -20),
                 heightAnchor.constraint(equalToConstant: 100)
             ])
         } else {
             removeFromSuperview()
         }
+        
+        addAnimationEffect(.fadeIn)
     }
     
     
     func isDisplayedOnScreen() -> Bool {
         return ((!isHidden) || (superview != nil))
     }
-    
 }
+
